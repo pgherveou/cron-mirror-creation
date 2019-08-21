@@ -24,7 +24,10 @@ REPOS = (
         *lang_pkg('node', 'coffeelint'), r'--files-regex=\.(js|coffee)$',
     ),
     ('mirrors-csslint', *lang_pkg('node', 'csslint'), CSS),
-    ('mirrors-eslint', *lang_pkg('node', 'eslint'), JS),
+    (
+        'mirrors-eslint', 
+        *lang_pkg('node', 'eslint'), r'--files-regex=\.(js|jsx|ts|tsx)$',
+    ),
     ('mirrors-fixmyjs', *lang_pkg('node', 'fixmyjs'), JS),
     ('mirrors-isort', *lang_pkg('python', 'isort'), PY),
     ('mirrors-jshint', *lang_pkg('node', 'jshint'), JS),
